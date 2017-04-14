@@ -61,14 +61,14 @@ y = x.plus(0.2)            // '0.3'
 Big(0.7).plus(x).plus(y)   // '1.1'
 ```
 
-### 分支管理与命名（暂定）
+## 分支管理与命名（暂定）
 在后台不明确的情况下，前端请严格遵循`Git Flow`工作流规范。
 ![image](http://upload-images.jianshu.io/upload_images/1416338-2b5d1a64e15419d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - feature分支：feature+需求号，如`feature1916`
 - release分支：release+需求号，如`release1916`
 
-### commit message规范（试行）
+## commit message规范（试行）
 社区有多种 Commit message 的写法规范，其中[Angular](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0) 规范是目前使用最广的写法。不过，在现有团队中推行严格意义上的commit 规范还是有点太重了，因此暂时定一些简单的规则，特别是在master分支，建议遵守。
 基本格式为：
 ```
