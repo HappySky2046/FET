@@ -70,12 +70,20 @@ Big(0.7).plus(x).plus(y)   // '1.1'
 
 ### commit message规范（试行）
 社区有多种 Commit message 的写法规范，其中[Angular](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0) 规范是目前使用最广的写法。不过，在现有团队中推行严格意义上的commit 规范还是有点太重了，因此暂时定一些简单的规则，特别是在master分支，建议遵守。
-- 改bug：fix:bug号+bug标题  如：fixe: 13175 【管理端】【采购订单】修改采购订单页面，修改供应商后，保存报错
+基本格式为：
+```
+type:(scope影响的范围)subject本次commit的简短描述
+<br>
+body 如果scope和subject不能描述清楚，在这里详述。
+```
+
+
+- 改bug：fix:bug号+bug标题  如：fixe: 13175 【管理端】【采购订单】修改采购订单页面，修改供应商后，保存报错 
 - 添加新功能：feat:balabalabala
 - 修改文档：docs:balabalabala
 - 修改样式：style:修改的样式+可能会影响的地方
 - 代码重构：refactor: 重构的内容+可能会影响的模块或业务流程
-- 优化：perf:优化的内容+可能会影响的模块或业务流程  如：pref：样式优化，增大了菜单的点击区域。effect：侧边菜单样式
+- 优化：perf:优化的内容+可能会影响的模块或业务流程  如：pref：(侧边菜单样式)样式优化，增大了菜单的点击区域。
 - 构建工具的修改或优化等：build:修改的内容或新增的功能
 - 当前 commit 用于撤销以前的 commit：revert:reverts commit + hash + 撤销的commmit的标题
 - 修改了其他的不影响业务东西，且不属于上面任何一种情况：chore：balabala
