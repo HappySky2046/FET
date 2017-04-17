@@ -27,7 +27,7 @@
 ### 变量
 - class：`aaa-bbb`
 - 常量：`AAA_BBB`
-- 函数：`aaaBbb(){}`
+- 函数：`aaaBbb(){}` 动词+定语（形容词）+宾语（名词）） 比如getResponse，sendRequest
 - 类名 `class AaaBbb`
 - 变量声明，`let`与`const`。
     - 尽量使用`const`。
@@ -43,6 +43,87 @@
 - `react-route`的path用小写，_连接单词`<Routepath="service_mission_manage">。
 
 > Tips：3是一个很奇妙的数字，目录结构，对象设计，路由层次等，尽量不要超过3层，超过3层时慎重考虑，保证工程的**扁平化**
+
+### 常用缩写
+**遵循通用规范，只使用显而易见的缩写，不要滥用，不要有歧义。**
+| 变量名 | 常用缩写 |
+| -- | -- |
+| application | app | 
+| arguments | args | 
+| average | avg | 
+| address | addr | 
+| authority / authorize | auth | 
+| attribute | attr | 
+| asynchronization | asyn | 
+| button | btn | 
+| buffer | buff | 
+| command | cmd | 
+| compare | cmp | 
+| calculate | calc | 
+| calendar | cal | 
+| character | char | 
+| delete | del | 
+| document | doc | 
+| define | def | 
+| develop | dev | 
+| department | dept | 
+| different | diff | 
+| directory | dir | 
+| dictionary | dict | 
+| duplicate / duplication | dup | 
+| dependency / dependent / depends | dep | 
+| error | err | 
+| escape | esc | 
+| environment | env | 
+| educate / education | edu |
+| equal / equality / equivalence / equivalent | eq |
+| frequency | freq | 
+| government | gov | 
+| information | info | 
+| initialize | init | 
+| individual | indv | 
+| image | img | 
+| escpae | esc | 
+| length | len | 
+| message | msg | 
+| maximum | max | 
+| minimum | min | 
+| navigation | nav | 
+| number | num | 
+| object | obj | 
+| operator | opr | 
+| organization | org | 
+| picture | pic | 
+| previos | pre | 
+| package | pkg | 
+| parameter | param | 
+| password | pwd | 
+| position | pos | 
+| properties | props | 
+| request | req | 
+| response | rsp | 
+| record | rec | 
+| reference | ref | 
+| register | reg | 
+| resource | res | 
+| receive / received | recv | 
+| string | str | 
+| source | src | 
+| standard | std | 
+| statistic | stat | 
+| student | stu | 
+| summation / summary	 | sum | 
+| system | sys | 
+| system | sys | 
+| sequence | seq | 
+| synchronize | sync | 
+| temporary | tmp/temp | 
+| translate | trans | 
+| user | usr | 
+| utility | util | 
+| variable | var | 
+| window | win | 
+
 
 ## 数据处理
 ### 使用moment.js进行日期处理
