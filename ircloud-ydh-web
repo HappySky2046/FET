@@ -1,0 +1,71 @@
+Table优化思路：
+
+  1.对antd Table组件二次封装拆分成AntdTable,Table
+  2.loading效果与antd原Table组件分离，避免loading=false再次渲染
+  3.在AntdTable shouldComponentUpdate对传入props的loading,scroll,rowSelection.selectedRowKeys进行是否执行渲染
+  4.props 扩展stopShouldUpdate用于阻止shouldComponentUpdate优化逻辑
+  
+附上代码：
+
+class AntdTable extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  shouldComponentUpdate(nextProps) {
+    if(this.props.stopShouldUpdate===true){//阻止默认（以下优化判断）行为
+      return true;
+    }
+    if(Object.keys(this.props).indexOf('loading')===-1){//没有loading则不需要优化判断
+      return true;
+    }
+    if(this.props.loading!==nextProps.loading&&nextProps.loading===false){//loading 不相等且为false时渲染
+      return true;
+    }
+    if(nextProps.loading===true&&!this.props.scroll){//loading为true非this.props.scroll阻止渲染
+      return false;
+    }
+    if(JSON.stringify(this.props.scroll)!==JSON.stringify(nextProps.scroll)){//scroll不相等渲染
+      return true;
+    }
+    if(this.props.rowSelection&&JSON.stringify(this.props.rowSelection.selectedRowKeys)!==JSON.stringify(nextProps.rowSelection.selectedRowKeys)){//selectedRowKeys不相等渲染
+      return true;
+    }
+    return false;
+  }
+  render() {//loading={false}覆盖loading
+    return (
+      <_Table {...this.props} loading={false}/>
+    );
+  }
+}
+/**
+*table和loading分离
+*/
+class Table extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render() {
+    const spinStyle={
+      position:'absolute',
+      left:'50%',
+      top:'50%',
+      margin:'-10px',
+      zIndex:'10',
+      display:this.props.loading?'block':'none'
+    };
+    let columns = this.props.columns.filter((item)=>{//过滤隐藏列
+      return item.hidden!==true;
+    });
+    return (
+      <div style={{position:'relative'}}>
+        <Spin style={spinStyle}/>
+        <div style={{opacity:this.props.loading?'0.7':'1'}}>
+          <AntdTable {...this.props} columns={columns}/>
+        </div>
+      </div>
+    );
+  }
+}
+
+Table.Origin=_Table;//暴露原有的Table
