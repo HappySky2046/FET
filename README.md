@@ -161,18 +161,18 @@ body 如果scope和subject不能描述清楚，在这里详述。
 ```
 
 
-- 改bug：fix:bug号+bug标题  如：fixe: 13175 【管理端】【采购订单】修改采购订单页面，修改供应商后，保存报错 
-- 添加新功能：feat:balabalabala
-- 修改文档：docs:balabalabala
-- 修改样式：style:（可能会影响的地方）修改的样式
+- 改bug：fix: bug号+bug标题  如：fixe: 13175 【管理端】【采购订单】修改采购订单页面，修改供应商后，保存报错 
+- 添加新功能：feat: balabalabala
+- 修改文档：docs: balabalabala
+- 修改样式：style: （可能会影响的地方）修改的样式
 - 代码重构：refactor: （可能会影响的模块或业务流程）重构的内容
-- 优化：perf:优化的内容+可能会影响的模块或业务流程  如：pref：(侧边菜单样式)样式优化，增大了菜单的点击区域。
-- 构建工具的修改或优化等：build:修改的内容或新增的功能
-- 当前 commit 用于撤销以前的 commit：revert:reverts commit + hash + 撤销的commmit的标题
+- 优化：perf: 优化的内容+可能会影响的模块或业务流程  如：pref: (侧边菜单样式)样式优化，增大了菜单的点击区域。
+- 构建工具的修改或优化等：build: 修改的内容或新增的功能
+- 当前 commit 用于撤销以前的 commit: revert:reverts commit + hash + 撤销的commmit的标题
 - 修改了其他的不影响业务东西，且不属于上面任何一种情况：chore：balabala
 
-- 集成工具：ci:暂时涉及不到
-- 测试用例：test：暂时涉及不到
+- 集成工具：ci: 暂时涉及不到
+- 测试用例：test: 暂时涉及不到
 
 ## 编码规范
 基于以下编码规范定制。
