@@ -45,23 +45,6 @@
 
 > Tips：3是一个很奇妙的数字，目录结构，对象设计，路由层次等，尽量不要超过3层，超过3层时慎重考虑，保证工程的**扁平化**
 
-## 数据处理
-### 使用moment.js进行日期处理
-```
-moment("12-25-1995", "MM-DD-YYYY");
-moment("2010-10-20 4:30", "YYYY-MM-DD HH:mm");
-moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-```
-
-### 价格处理(后面可能上)
-使用big.js进行价格处理
-```
-0.1 + 0.2                  // 0.30000000000000004
-x = new Big(0.1)
-y = x.plus(0.2)            // '0.3'
-Big(0.7).plus(x).plus(y)   // '1.1'
-```
-
 ## 分支管理与命名（暂定）
 在后台不明确的情况下，前端请严格遵循`Git Flow`工作流规范。
 ![image](http://upload-images.jianshu.io/upload_images/1416338-2b5d1a64e15419d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
